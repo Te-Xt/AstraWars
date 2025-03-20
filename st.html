@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The AstraVerse</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: gold;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Star Wars Intro Text Animation */
+    .star-wars-intro {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      perspective: 500px;
+      overflow: hidden;
+    }
+
+    .crawl {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 100%;
+      transform-origin: 50% 100%;
+      animation: crawl 40s linear infinite; /* Faster animation */
+      transform-style: preserve-3d;
+    }
+
+    .crawl h1 {
+      font-size: 5vw; /* Dynamic sizing based on screen width */
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+
+    .crawl p {
+      font-size: 2vw; /* Dynamic sizing based on screen width */
+      text-align: center;
+      line-height: 2.5rem;
+      padding: 0 10%; /* Adjust padding for better readability */
+      transform: rotateX(25deg); /* 3D rotation effect */
+    }
+
+    @keyframes crawl {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: -150%;
+      }
+    }
+
+    /* Background Stars Effect */
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+      background-size: 20px 20px;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Stars -->
+  <div class="stars"></div>
+
+  <!-- Star Wars Crawl -->
+  <div class="star-wars-intro">
+    <div class="crawl">
+      <h1>The AstraVerse</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a galaxy far, far away, the AstraVerse was born—a realm of endless possibilities and untold mysteries. Heroes rise, empires fall, and destinies intertwine in this cosmic odyssey.
+        <br><br>
+        Join us as we embark on an epic journey through the stars, where courage meets destiny and hope lights the way. The fate of the universe rests in your hands. Will you answer the call?
+        <br><br>
+        (Dummy text placeholder. Replace with your content.)
+      </p>
+    </div>
+  </div>
+</body>
+</html>
